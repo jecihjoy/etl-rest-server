@@ -1,0 +1,186 @@
+[
+    {
+        "sectionTitle": "",
+        "indicators": [
+            {
+                "label": "Locations",
+                "indicator": "location"
+            }
+        ]
+    },
+    {
+        "sectionTitle": "Visits",
+        "indicators": [
+            {
+                "label": "Scheduled today",
+                "description": "Patients scheduled today",
+                "indicator": "appointment_today"
+            },
+            {
+                "label": "Honored visit",
+                "description": "scheduled patients who came for visits today",
+                "indicator": "scheduled_visit_today"
+            },
+            {
+                "label": "visits today",
+                "description": "All visits today",
+                "indicator": "visit_today"
+            },
+            {
+                "label": "Unscheduled early",
+                "description": "Patients who came earlier than their rtc date",
+                "indicator": "early_appointment_today"
+            },
+            {
+                "label": "Unscheduled late",
+                "description": "Patients who came after their rtc date",
+                "indicator": "late_appointment_today"
+            },
+            {
+                "label": "Missed appointments",
+                "description": "Patients who missed their appointments today",
+                "indicator": "missed_appointment_today"
+            }
+        ]
+    },
+    {
+        "sectionTitle": "LTFUs",
+        "indicators": [
+            {
+                "label": "ltfu outcomes today",
+                "description": "ltfu outcomes today",
+                "indicator": "ltfu_outcome_today"
+            },
+            {
+                "label": "LTFUs brought to care today",
+                "description": "LTFUs brought to care today",
+                "indicator": "ltfu_to_active_today"
+            }
+        ]
+    },
+    {
+        "sectionTitle": "Viral Load today",
+        "indicators": [
+            {
+                "label": "Active and Overdue for VL",
+                "description": "overdue for vl active",
+                "indicator": "overdue_for_vl_active"
+            },
+            {
+                "label": "Active and Eligible for VL",
+                "description": "Active and Eligible for VL this week",
+                "indicator": "due_for_vl_today_active"
+            },
+            {
+                "label": "Scheduled and Eligible for VL",
+                "description": "Sheduled and Due for VL",
+                "indicator": "scheduled_today_and_due_for_vl"
+            },
+            {
+                "label": "Unsheduled and Eligible for VL",
+                "description": "Unsheduled and Due for VL",
+                "indicator": "unscheduled_today_and_due_for_vl"
+            },
+            {
+                "label": "Eligible for VL with VL order",
+                "description": "Eligible for VL with VL order",
+                "indicator": "due_for_vl_today_has_vl_order"
+            },
+            {
+                "label": "Eligible for VL without VL order",
+                "description": "Eligible for VL without VL order",
+                "indicator": "due_for_vl_today_dont_have_order"
+            },
+            {
+                "label": "Has VL and Suppressed cumulative",
+                "description": "Has VL and Suppressed cumulative",
+                "indicator": "is_suppressed_active"
+            },
+            {
+                "label": "Has VL and Unsuppressed cumulative",
+                "description": "Has VL and Unsuppressed cumulative",
+                "indicator": "is_unsuppressed_active"
+            }
+        ]
+    },
+    {
+        "sectionTitle": "Differentiated Care (DC)",
+        "indicators": [
+            {
+                "label": "Eligible for DC",
+                "description": "Eligible for DC",
+                "indicator": "dc_eligible_cumulative"
+            }
+        ]
+    },
+    {
+        "sectionTitle": "ART",
+        "indicators": [
+            {
+                "label": "enrolled_today",
+                "description": "enrolled today",
+                "indicator": "enrolled_today"
+            },
+            {
+                "label": "art_revisit_today",
+                "description": "ART revisit today",
+                "indicator": "art_revisit_today"
+            },
+            {
+                "label": "transfer_in_today",
+                "description": "Transfer in today",
+                "indicator": "transfer_in_today"
+            },
+            {
+                "label": "transfer_out_today",
+                "description": "Transfer out today",
+                "indicator": "transfer_out_today"
+            }
+        ]
+    },
+    {
+        "sectionTitle": "Second Visit for New on ART (TX_SV)",
+        "indicators": [
+            {
+                "label": "Started ART today",
+                "description": "Started ART today",
+                "indicator": "started_art_today"
+            },
+            {
+                "label": "Scheduled second visit",
+                "description": "Scheduled second visit",
+                "indicator": "tx2_appointment_today"
+            },
+            {
+                "label": "ART second visit today",
+                "description": "ART second visit today",
+                "indicator": "tx2_visit_today"
+            },
+            {
+                "label": "Honored Second visit",
+                "description": "Honored Second visit",
+                "indicator": "tx2_appointment_honored"
+            },
+            {
+                "label": "Missed ART second visit today",
+                "description": "Missed ART second visit  ",
+                "indicator": "tx2_appointment_missed"
+            }
+        ]
+    },
+    {
+        "sectionTitle": "Interventions",
+        "indicators": [
+            {
+                "label": "Total interventions",
+                "description": "Pinterventions",
+                "indicator": "interventions"
+            },
+            {
+                "label": "intervention done today",
+                "description": "intervention done today",
+                "indicator": "intervention_done_today"
+            }
+        ]
+    }
+]

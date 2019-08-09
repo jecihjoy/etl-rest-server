@@ -120,6 +120,9 @@ import * as differentiated_care_program_base from './json-reports/differentiated
 import * as surge_report_base from './json-reports/surge-report-base.json';
 import * as surge_report_aggregate from './json-reports/surge-report-aggregate.json';
 
+import * as surge_daily_report_base from './json-reports/surge-daily-report-base';
+import * as surge_daily_report_aggregate from './json-reports/surge-daily-report-aggregate';
+
 export class BaseMysqlReport {
     constructor(reportName, params) {
         this.reportName = reportName;
@@ -528,6 +531,12 @@ export class BaseMysqlReport {
                     resolve({
                         main: this.cloneJsonSchema(surge_report_aggregate),
                         surgeReport: this.cloneJsonSchema(surge_report_base)
+                    });
+                    break;
+                case 'surgeDailyReport':
+                    resolve({
+                        main: this.cloneJsonSchema(surge_daily_report_aggregate),
+                        surgeDailyReport: this.cloneJsonSchema(surge_daily_report_base)
                     });
                     break;
                 default:
