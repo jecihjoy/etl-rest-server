@@ -597,8 +597,105 @@
             "expressionOptions": {
                 "expression": "sum(intervention_done_this_week)"
             }
+        },
+        {
+            "type": "derived_column",
+            "alias": "due_for_vl_has_vl_order_scheduled",
+            "expressionType": "simple_expression",
+            "expressionOptions": {
+                "expression": "sum(due_for_vl_has_vl_order_scheduled)"
+            }
+        },
+        {
+            "type": "derived_column",
+            "alias": "due_for_vl_has_vl_order_unscheduled",
+            "expressionType": "simple_expression",
+            "expressionOptions": {
+                "expression": "sum(due_for_vl_has_vl_order_unscheduled)"
+            }
+        },
+        {
+            "type": "derived_column",
+            "alias": "due_for_vl_dont_have_order_scheduled",
+            "expressionType": "simple_expression",
+            "expressionOptions": {
+                "expression": "sum(due_for_vl_dont_have_order_scheduled)"
+            }
+        },
+        {
+            "type": "derived_column",
+            "alias": "due_for_vl_dont_have_order_unscheduled",
+            "expressionType": "simple_expression",
+            "expressionOptions": {
+                "expression": "sum(due_for_vl_dont_have_order_unscheduled)"
+            }
+        },
+        {
+            "type": "derived_column",
+            "alias": "due_for_vl_has_vl_order_unscheduled",
+            "expressionType": "simple_expression",
+            "expressionOptions": {
+                "expression": "sum(due_for_vl_has_vl_order_unscheduled)"
+            }
+        },
+        {
+            "type": "derived_column",
+            "alias": "has_vl_this_week_and_suppressed",
+            "expressionType": "simple_expression",
+            "expressionOptions": {
+                "expression": "sum(has_vl_this_week_and_suppressed)"
+            }
+        },
+        {
+            "type": "derived_column",
+            "alias": "has_vl_this_week_and_unsuppressed",
+            "expressionType": "simple_expression",
+            "expressionOptions": {
+                "expression": "sum(has_vl_this_week_and_unsuppressed)"
+            }
+        },
+        {
+            "type": "derived_column",
+            "alias": "missed_to_active_this_week",
+            "expressionType": "simple_expression",
+            "expressionOptions": {
+                "expression": "sum(missed_to_active_this_week)"
+            }
+        },
+        {
+            "type": "derived_column",
+            "alias": "defaulter_to_active_this_week",
+            "expressionType": "simple_expression",
+            "expressionOptions": {
+                "expression": "sum(defaulter_to_active_this_week)"
+            }
+        },
+        {
+            "type": "derived_column",
+            "alias": "not_elligible_and_on_dc",
+            "expressionType": "simple_expression",
+            "expressionOptions": {
+                "expression": "sum(not_elligible_and_on_dc)"
+            }
+        },
+        {
+            "type": "derived_column",
+            "alias": "tx2_scheduled_this_week_but_came_early",
+            "expressionType": "simple_expression",
+            "expressionOptions": {
+                "expression": "sum(tx2_scheduled_this_week_but_came_early)"
+            }
+        },
+        {
+            "type": "derived_column",
+            "alias": "elligible_total_revised",
+            "expressionType": "simple_expression",
+            "expressionOptions": {
+                "expression": "sum(elligible_total_revised)"
+            }
         }
     ],
+
     "groupBy": {
         "groupParam": "groupByParam",
         "columns": [

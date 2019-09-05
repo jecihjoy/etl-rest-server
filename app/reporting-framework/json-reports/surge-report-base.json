@@ -6,7 +6,7 @@
     "uses": [],
     "sources": [
         {
-            "table": "etl.surge_weekly_report_dataset",
+            "table": "etl.surge_weekly_report_dataset_m6",
             "alias": "srb"
         },
         {
@@ -48,6 +48,11 @@
             "type": "simple_column",
             "alias": "age",
             "column": "srb.age"
+        },
+        {
+            "type": "simple_column",
+            "alias": "gender",
+            "column": "srb.gender"
         },
         {
             "type": "simple_column",
@@ -544,6 +549,62 @@
             "type": "simple_column",
             "alias": "intervention_done_this_week",
             "column": "srb.intervention_done_this_week"
+        },
+
+        {
+            "type": "simple_column",
+            "alias": "has_vl_this_week_and_suppressed",
+            "column": "srb.has_vl_this_week_and_suppressed"
+        },
+        {
+            "type": "simple_column",
+            "alias": "due_for_vl_has_vl_order_scheduled",
+            "column": "srb.due_for_vl_has_vl_order_scheduled"
+        },
+        {
+            "type": "simple_column",
+            "alias": "due_for_vl_has_vl_order_unscheduled",
+            "column": "srb.due_for_vl_has_vl_order_unscheduled"
+        },
+        {
+            "type": "simple_column",
+            "alias": "due_for_vl_dont_have_order_scheduled",
+            "column": "srb.due_for_vl_dont_have_order_scheduled"
+        },
+        {
+            "type": "simple_column",
+            "alias": "due_for_vl_dont_have_order_unscheduled",
+            "column": "srb.due_for_vl_dont_have_order_unscheduled"
+        },
+        {
+            "type": "simple_column",
+            "alias": "has_vl_this_week_and_unsuppressed",
+            "column": "srb.has_vl_this_week_and_unsuppressed"
+        },
+        {
+            "type": "simple_column",
+            "alias": "missed_to_active_this_week",
+            "column": "srb.missed_to_active_this_week"
+        },
+        {
+            "type": "simple_column",
+            "alias": "defaulter_to_active_this_week",
+            "column": "srb.defaulter_to_active_this_week"
+        },
+        {
+            "type": "simple_column",
+            "alias": "not_elligible_and_on_dc",
+            "column": "srb.not_elligible_and_on_dc"
+        },
+        {
+            "type": "simple_column",
+            "alias": "tx2_scheduled_this_week_but_came_early",
+            "column": "srb.tx2_scheduled_this_week_but_came_early"
+        },
+        {
+            "type": "simple_column",
+            "alias": "elligible_total_revised",
+            "column": "srb.elligible_total_revised"
         },
         {
             "type": "simple_column",
