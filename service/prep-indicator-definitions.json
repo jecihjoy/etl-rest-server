@@ -1,0 +1,35 @@
+[
+    {
+        "sectionTitle": "Prevention",
+        "indicators": [
+            {
+                "label": "Locations",
+                "indicator": "location"
+            },
+            {
+                "label": "Active on PrEP",
+                "indicator": "active_on_prep_this_month"
+            },
+            {
+                "label": "Enrolled in PrEP",
+                "indicator": "enrolled_in_prep_this_month"
+            },
+            {
+                "label": "PrEP Defaulters",
+                "indicator": "prep_defaulter_this_month"
+            },
+            {
+                "label": "Discontinued on PrEP",
+                "indicator": "prep_discontinued_this_month"
+            },
+            {
+                "label": "PrEP LTFUs",
+                "indicator": "prep_ltfu_this_month"
+            },
+            {
+                "label": "Turned Positive this month",
+                "indicator": "prev_on_prep_and_turned_positive"
+            }
+        ]
+    }
+]
