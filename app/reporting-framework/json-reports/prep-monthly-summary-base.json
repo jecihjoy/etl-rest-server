@@ -78,6 +78,31 @@
             "type": "simple_column",
             "alias": "gender",
             "column": "prep.gender"
+        },
+        {
+            "type": "derived_column",
+            "alias": "population_type",
+            "expressionType": "case_statement",
+            "expressionOptions": {
+                "caseOptions": [
+                    {
+                        "condition": "prep.population_type = 1",
+                        "value": "discordant"
+                    },
+                    {
+                        "condition": "prep.population_type = 2",
+                        "value": "fisher_folk"
+                    },
+                    {
+                        "condition": "prep.population_type = 3",
+                        "value": "general_pop"
+                    },
+                    {
+                        "condition": "else",
+                        "value": "key_pop"
+                    }
+                ]
+            }
         }
 
     ],

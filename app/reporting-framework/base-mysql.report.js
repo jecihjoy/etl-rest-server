@@ -150,7 +150,8 @@ import * as patient_list_prep_template from './json-reports/patient-list-prep-te
 import * as hiv_latest_clinical_encounter_date_base from './json-reports/hiv-latest-clinical-encounter-date-base.json';
 import * as prep_monthly_summary_base_report from './json-reports/prep-monthly-summary-base.json';
 import * as prep_monthly_summary_aggregate_report from './json-reports/prep-monthly-summary-aggregate.json';
-
+import * as prep_monthly_populationtype_disaggregation from './json-reports/prep-monthly-population-type-disaggregation.json';
+import * as prep_monthly_summary from './json-reports/prep-monthly-summary.json'
 export class BaseMysqlReport {
     constructor(reportName, params) {
         this.reportName = reportName;
@@ -634,7 +635,18 @@ export class BaseMysqlReport {
                     break;
                 case 'prepMonthlySummaryReport':
                     resolve({
+                        main: this.cloneJsonSchema(prep_monthly_summary)
+                    });
+                    break;
+                case 'prepMonthlySummaryNoDisaggregation':
+                    resolve({
                         main: this.cloneJsonSchema(prep_monthly_summary_aggregate_report),
+                        prepMonthlySummaryBaseReport: this.cloneJsonSchema(prep_monthly_summary_base_report)
+                    });
+                    break;
+                case 'prepMonthlySummaryPopulationTypeDisaggregation':
+                    resolve({
+                        main: this.cloneJsonSchema(prep_monthly_populationtype_disaggregation),
                         prepMonthlySummaryBaseReport: this.cloneJsonSchema(prep_monthly_summary_base_report)
                     });
                     break;

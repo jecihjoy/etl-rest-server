@@ -1,5 +1,5 @@
 {
-    "name": "prepMonthlySummaryAggregateReport",
+    "name": "prepMonthlySummaryNoDisaggregation",
     "version": "1.0",
     "tag": "",
     "description": "",
