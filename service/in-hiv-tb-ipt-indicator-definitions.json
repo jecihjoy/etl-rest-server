@@ -1,0 +1,107 @@
+[
+    {
+        "sectionTitle": "",
+        "indicators": [
+            {
+                "label": "Location",
+                "indicator": "location"
+            }
+        ]
+    },
+    {
+        "sectionTitle": "Overview",
+        "indicators": [
+            {
+                "label": "All Active patients",
+                "indicator": "active_in_care_this_month"
+            },
+            {
+                "label": "Active on TB treatment",
+                "indicator": "on_tb_tx_this_month"
+            },
+            {
+                "label": "Active and on IPT",
+                "indicator": "on_ipt_this_month"
+            },
+            {
+                "label": "Active not on TB/IPT",
+                "indicator": "active_not_on_tb_ipt"
+            },
+            {
+                "label": "Active and on ART",
+                "indicator": "on_art_this_month"
+            }
+        ]
+    },
+    {
+        "sectionTitle": "IPT in HIV",
+        "indicators": [
+            {
+                "label": "All Active patients",
+                "indicator": "active_in_care_this_month"
+            },
+            {
+                "label": "Active and on IPT",
+                "indicator": "on_ipt_this_month"
+            },
+            {
+                "label": "Starting IPT this month",
+                "indicator": "started_ipt_this_month"
+            },
+            {
+                "label": "Completed IPT 6months",
+                "indicator": "completed_ipt_past_6_months"
+            },
+            {
+                "label": "Completed IPT 12months",
+                "indicator": "completed_ipt_past_12_months"
+            },
+            {
+                "label": "Completed IPT this month",
+                "indicator": "completed_ipt_this_month"
+            },
+            {
+                "label": "Stopped IPT this month",
+                "indicator": "stopped_ipt_this_month"
+            }
+        ]
+    },
+    {
+        "sectionTitle": "TB in HIV",
+        "indicators": [
+            {
+                "label": "All Active patients",
+                "indicator": "active_in_care_this_month"
+            },
+            {
+                "label": "Active on TB treatment",
+                "indicator": "on_tb_tx_this_month"
+            },
+            {
+                "label": "Started TB this month",
+                "indicator": "started_tb_tx_this_month"
+            }
+        ]
+    },
+    {
+        "sectionTitle": "TB screening this month",
+        "indicators": [
+            {
+                "label": "All Active patients",
+                "indicator": "active_in_care_this_month"
+            },
+            {
+                "label": "Screened and active this month",
+                "indicator": "tb_screened_active_this_month"
+            },
+            {
+                "label": "Active and not screened",
+                "indicator": "active_not_screened"
+            },
+            {
+                "label": "Screened and had Visit this month",
+                "indicator": "tb_screened_and_visit_this_month"
+            }
+        ]
+    }
+]

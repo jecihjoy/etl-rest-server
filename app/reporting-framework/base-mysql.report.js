@@ -146,7 +146,6 @@ import * as prep_dataset_report from './json-reports/prep-dataset-report.json';
 import * as ltfu_surge_baseline_report from './json-reports/ltfus-surge-baseline-base.json';
 import * as ltfu_surge_baseline_aggregate_report from './json-reports/ltfus-surge-baseline-aggregate.json';
 import * as patient_list_prep_template from './json-reports/patient-list-prep-template.json';
-
 import * as hiv_latest_clinical_encounter_date_base from './json-reports/hiv-latest-clinical-encounter-date-base.json';
 import * as prep_monthly_summary from './json-reports/prep-monthly-summary.json'
 import * as prep_monthly_summary_aggregate_report from './json-reports/prep-monthly-summary-aggregate.json';
@@ -173,6 +172,10 @@ import * as hei_unknown_program_outcome_aggregate from './json-reports/hei-unkno
 import * as hei_unknown_program_outcome_base from './json-reports/hei-unknown-program-outcome-base.json';
 import * as hei_report_patient_list_template from './json-reports/hei-report-patient-list-template.json';
 
+import * as hiv_ipt_monthly_summary_aggregate from './json-reports/in-hiv-ipt_monthly_summary_aggregate.json';
+import * as hiv_tb_monthly_summary_aggregate from './json-reports/in-hiv-tb_monthly_summary_aggregate.json';
+import * as hiv_tb_ipt_dataset_base from './json-reports/in-hiv-tb-ipt-dataset-base.json';
+import * as tb_on_hiv from './json-reports/in-hiv-tb-ipt.json';
 export class BaseMysqlReport {
     constructor(reportName, params) {
         this.reportName = reportName;
@@ -740,6 +743,23 @@ export class BaseMysqlReport {
                             main: this.cloneJsonSchema(hei_report_patient_list_template)
                         });
                         break;
+                case 'TbIptReport':
+                    resolve({
+                        main: this.cloneJsonSchema(tb_on_hiv)
+                    });
+                    break;
+                case 'iptMonthlySummaryAggregate':
+                    resolve({
+                        main: this.cloneJsonSchema(hiv_ipt_monthly_summary_aggregate),
+                        HivTbIptDataSetBase: this.cloneJsonSchema(hiv_tb_ipt_dataset_base)
+                    });
+                    break;
+                case 'tbInHivMonthlySummaryAggregate':
+                    resolve({
+                        main: this.cloneJsonSchema(hiv_tb_monthly_summary_aggregate),
+                        HivTbIptDataSetBase: this.cloneJsonSchema(hiv_tb_ipt_dataset_base)
+                    });
+                    break;
                 default:
                     reject('Unknown report ', reportName);
                     break;

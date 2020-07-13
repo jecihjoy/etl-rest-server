@@ -1,0 +1,247 @@
+{
+    "name": "HivTbIptDataSetBase",
+    "version": "1.0",
+    "tag": "",
+    "description": "",
+    "uses": [],
+    "sources": [
+        {
+            "table": "<<hivMonthlyDatasetSource>>",
+            "alias": "hmsd"
+        },
+        {
+            "table": "amrs.location",
+            "alias": "l",
+            "join": {
+                "type": "INNER",
+                "joinCondition": "l.location_id = hmsd.location_id"
+            }
+        }
+    ],
+    "columns": [
+        {
+            "type": "simple_column",
+            "alias": "gender",
+            "column": "hmsd.gender"
+        },
+        {
+            "type": "simple_column",
+            "alias": "birthdate",
+            "column": "hmsd.birthdate"
+        },
+        {
+            "type": "simple_column",
+            "alias": "age",
+            "column": "hmsd.age"
+        },
+        {
+            "type": "simple_column",
+            "alias": "person_id",
+            "column": "hmsd.person_id"
+        },
+        {
+            "type": "simple_column",
+            "alias": "location_uuid",
+            "column": "l.uuid"
+        },
+        {
+            "type": "simple_column",
+            "alias": "location",
+            "column": "l.name"
+        },
+        {
+            "type": "simple_column",
+            "alias": "location_id",
+            "column": "hmsd.location_id"
+        },
+        {
+            "type": "simple_column",
+            "alias": "cur_arv_meds",
+            "column": "hmsd.cur_arv_meds"
+        },
+        {
+            "type": "derived_column",
+            "alias": "enrollment_date",
+            "expressionType": "simple_expression",
+            "expressionOptions": {
+                "expression": "date_format(hmsd.enrollment_date,'%d-%m-%Y')"
+            }
+        },
+        {
+            "type": "derived_column",
+            "alias": "arv_first_regimen_start_date",
+            "expressionType": "simple_expression",
+            "expressionOptions": {
+                "expression": "date_format(hmsd.arv_first_regimen_start_date,'%d-%m-%Y')"
+            }
+        },
+        {
+            "type": "derived_column",
+            "alias": "cur_regimen_arv_start_date",
+            "expressionType": "simple_expression",
+            "expressionOptions": {
+                "expression": "date_format(hmsd.arv_start_date,'%d-%m-%Y')"
+            }
+        },
+        {
+            "type": "simple_column",
+            "alias": "cur_arv_line",
+            "column": "hmsd.cur_arv_line"
+        },
+        {
+            "type": "simple_column",
+            "alias": "vl_1",
+            "column": "hmsd.vl_1"
+        },
+        {
+            "type": "derived_column",
+            "alias": "vl_1_date",
+            "expressionType": "simple_expression",
+            "expressionOptions": {
+                "expression": "date_format(hmsd.vl_1_date,'%d-%m-%Y')"
+            }
+        },
+        {
+            "type": "simple_column",
+            "alias": "started_ipt",
+            "column": "hmsd.started_ipt_this_month"
+        },
+        {
+            "type": "simple_column",
+            "alias": "ipt_completion_date",
+            "column": "hmsd.ipt_completion_date"
+        },
+        {
+            "type": "simple_column",
+            "alias": "ipt_stop_date",
+            "column": "hmsd.ipt_stop_date"
+        },
+        {
+            "type": "simple_column",
+            "alias": "ipt_start_date",
+            "column": "hmsd.ipt_start_date"
+        },
+        {
+            "type": "derived_column",
+            "alias": "completed_ipt_this_month",
+            "expressionType": "simple_expression",
+            "expressionOptions": {
+                "expression": "IF(hmsd.ipt_completion_date BETWEEN DATE_FORMAT(hmsd.enddate, '%y-%m-01') AND hmsd.enddate,1,0)"
+            }
+        },
+        {
+            "type": "derived_column",
+            "alias": "completed_ipt_past_6_months",
+            "expressionType": "simple_expression",
+            "expressionOptions": {
+                "expression": "IF(TIMESTAMPDIFF(MONTH,hmsd.ipt_completion_date,hmsd.enddate) <= 6,1,0)"
+            }
+        },
+        {
+            "type": "derived_column",
+            "alias": "stopped_ipt_this_month",
+            "expressionType": "simple_expression",
+            "expressionOptions": {
+                "expression": "IF(hmsd.ipt_stop_date BETWEEN DATE_FORMAT(hmsd.enddate, '%y-%m-01') AND hmsd.enddate,1,0)"
+            }
+        },
+        {
+            "type": "derived_column",
+            "alias": "on_ipt_this_month",
+            "expressionType": "simple_expression",
+            "expressionOptions": {
+                "expression": "on_ipt_this_month"
+            }
+        },
+        {
+            "type": "simple_column",
+            "alias": "completed_ipt_past_12_months",
+            "column": "hmsd.completed_ipt_past_12_months"
+        },
+        {
+            "type": "simple_column",
+            "alias": "on_art_this_month",
+            "column": "hmsd.on_art_this_month"
+        },
+        {
+            "type": "simple_column",
+            "alias": "on_tb_tx_this_month",
+            "column": "hmsd.on_tb_tx_this_month"
+        },
+        {
+            "type": "simple_column",
+            "alias": "active_in_care_this_month",
+            "column": "hmsd.active_in_care_this_month"
+        },
+        {
+            "type": "simple_column",
+            "alias": "tb_tx_start_date",
+            "column": "hmsd.tb_tx_start_date"
+        },
+        {
+            "type": "simple_column",
+            "alias": "tb_screening_datetime",
+            "column": "hmsd.tb_screening_datetime"
+        },
+        {
+            "type": "simple_column",
+            "alias": "started_tb_tx_this_month",
+            "column": "hmsd.started_tb_tx_this_month"
+        },
+        {
+            "type": "simple_column",
+            "alias": "on_tb_tx_and_started_art_this_month",
+            "column": "hmsd.on_tb_tx_and_started_art_this_month"
+        },
+        {
+            "type": "simple_column",
+            "alias": "tb_screened_active_this_month",
+            "column": "hmsd.tb_screened_active_this_month"
+        },
+        {
+            "type": "simple_column",
+            "alias": "presumed_tb_positive_this_month",
+            "column": "hmsd.presumed_tb_positive_this_month"
+        },
+        {
+            "type": "simple_column",
+            "alias": "tb_screened_and_visit_this_month",
+            "column": "hmsd.tb_screened_this_visit_this_month"
+        },
+        {
+            "type": "derived_column",
+            "alias": "active_not_screened",
+            "expressionType": "simple_expression",
+            "expressionOptions": {
+                "expression": "IF (hmsd.active_in_care_this_month  = 1 AND hmsd.tb_screened_active_this_month != 1,1,0)"
+            }
+        },
+        {
+            "type": "derived_column",
+            "alias": "active_not_on_tb_ipt",
+            "expressionType": "simple_expression",
+            "expressionOptions": {
+                "expression": "IF (hmsd.active_in_care_this_month  = 1 AND hmsd.on_ipt_this_month != 1 AND hmsd.on_tb_tx_this_month != 1 ,1,0)"
+            }
+        }
+    ],
+    "filters": {
+        "conditionJoinOperator": "and",
+        "conditions": [
+            {
+                "filterType": "tableColumns",
+                "conditionExpression": "endDate = ?",
+                "parameterName": "endDate"
+            },
+            {
+                "filterType": "tableColumns",
+                "conditionExpression": "hmsd.location_id in (?)",
+                "parameterName": "locations"
+            },
+            {
+                "filterType": "tableColumns",
+                "conditionExpression": "TIMESTAMPDIFF(DAY,DATE(hmsd.rtc_date),endDate) < 29"
+            }
+        ]
+    }
+}
