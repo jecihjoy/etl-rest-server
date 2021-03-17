@@ -15,6 +15,7 @@ export class FamilyTestingService {
         case 
           when test_result = 703 then 'POSITIVE' 
           when test_result = 664 then 'NEGATIVE' 
+          when test_result = 1138 then 'INDETERMINATE'
           else null 
         end as test_result_value,
         case 
@@ -26,7 +27,12 @@ export class FamilyTestingService {
         case 
           when facility_enrolled is not null then facility_enrolled  
         end as fm_facility_enrolled,
-        date_format(preferred_testing_date,"%d-%m-%Y") as preferred_testing_date
+        date_format(preferred_testing_date,"%d-%m-%Y") as preferred_testing_date,
+        case 
+          when fm_status is null then 'UNKNOWN' 
+          else fm_status 
+        end as modified_fm_status,
+        date_format(current_test_date,"%d-%m-%Y") as current_test_date
         FROM
             etl.flat_family_testing t1
                 INNER JOIN
