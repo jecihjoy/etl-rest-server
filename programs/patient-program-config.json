@@ -106,13 +106,17 @@
           {
             "uuid": "5b1ef308-ed8f-4a86-88a0-c29a30246740",
             "display": "HIVCLINICALREFERRAL"
+          },
+          {
+            "uuid": "8010fabc-2e58-4160-a201-fce9c609d2fa",
+            "display": "COVIDASSESSMENT"
           }
         ]
       },
       {
         "uuid": "0ae56e8a-93ed-4071-82f1-0eaf3eb592ff",
         "name": "Adult Transfer In Visit ",
-        "allowedIf": "age >= 20 && programLocation === intendedVisitLocationUuid && !isFirstAMPATHHIVVisit",
+        "allowedIf": "age >= 20 && programLocation !== intendedVisitLocationUuid && !isFirstAMPATHHIVVisit",
         "message": "Patient has to be 20yrs and above , patient's program location should be equal to the last HIV clinical encounter location and should not be the first clinical encounter",
         "encounterTypes": [
           {
@@ -150,6 +154,10 @@
           {
             "uuid": "5b1ef308-ed8f-4a86-88a0-c29a30246740",
             "display": "HIVCLINICALREFERRAL"
+          },
+          {
+            "uuid": "8010fabc-2e58-4160-a201-fce9c609d2fa",
+            "display": "COVIDASSESSMENT"
           }
         ]
       },
@@ -206,6 +214,10 @@
           {
             "uuid": "5b1ef308-ed8f-4a86-88a0-c29a30246740",
             "display": "HIVCLINICALREFERRAL"
+          },
+          {
+            "uuid": "8010fabc-2e58-4160-a201-fce9c609d2fa",
+            "display": "COVIDASSESSMENT"
           }
         ]
       },
@@ -254,13 +266,17 @@
           {
             "uuid": "5b1ef308-ed8f-4a86-88a0-c29a30246740",
             "display": "HIVCLINICALREFERRAL"
+          },
+          {
+            "uuid": "8010fabc-2e58-4160-a201-fce9c609d2fa",
+            "display": "COVIDASSESSMENT"
           }
         ]
       },
       {
         "uuid": "2e67b87c-8843-45b7-a380-3a0e8bd58e4d",
         "name": "Pediatric Transfer In Visit ",
-        "allowedIf": "age <= 14 && programLocation === intendedVisitLocationUuid && !isFirstAMPATHHIVVisit",
+        "allowedIf": "age <= 14 && programLocation !== intendedVisitLocationUuid && !isFirstAMPATHHIVVisit",
         "encounterTypes": [
           {
             "uuid": "a44ad5e2-b3ec-42e7-8cfa-8ba3dbcf5ed7",
@@ -297,6 +313,10 @@
           {
             "uuid": "5b1ef308-ed8f-4a86-88a0-c29a30246740",
             "display": "HIVCLINICALREFERRAL"
+          },
+          {
+            "uuid": "8010fabc-2e58-4160-a201-fce9c609d2fa",
+            "display": "COVIDASSESSMENT"
           }
         ]
       },
@@ -345,6 +365,10 @@
           {
             "uuid": "5b1ef308-ed8f-4a86-88a0-c29a30246740",
             "display": "HIVCLINICALREFERRAL"
+          },
+          {
+            "uuid": "8010fabc-2e58-4160-a201-fce9c609d2fa",
+            "display": "COVIDASSESSMENT"
           }
         ]
       },
@@ -393,13 +417,17 @@
           {
             "uuid": "5b1ef308-ed8f-4a86-88a0-c29a30246740",
             "display": "HIVCLINICALREFERRAL"
+          },
+          {
+            "uuid": "8010fabc-2e58-4160-a201-fce9c609d2fa",
+            "display": "COVIDASSESSMENT"
           }
         ]
       },
       {
         "uuid": "b27e13f7-7118-4c0d-b9d6-b759495991d6",
         "name": "Youth Transfer In Visit ",
-        "allowedIf": "age >= 10 && age <= 24 && programLocation === intendedVisitLocationUuid && !isFirstAMPATHHIVVisit",
+        "allowedIf": "age >= 10 && age <= 24 && programLocation !== intendedVisitLocationUuid && !isFirstAMPATHHIVVisit",
         "message": "Patient has to between 10 and 24yrs , in the location he enrolled into the HIV Care and Treatment program, must have a prior clinical encounter.The program location should be different from the previous encounter location",
         "encounterTypes": [
           {
@@ -437,6 +465,10 @@
           {
             "uuid": "5b1ef308-ed8f-4a86-88a0-c29a30246740",
             "display": "HIVCLINICALREFERRAL"
+          },
+          {
+            "uuid": "8010fabc-2e58-4160-a201-fce9c609d2fa",
+            "display": "COVIDASSESSMENT"
           }
         ]
       },
@@ -485,6 +517,10 @@
           {
             "uuid": "5b1ef308-ed8f-4a86-88a0-c29a30246740",
             "display": "HIVCLINICALREFERRAL"
+          },
+          {
+            "uuid": "8010fabc-2e58-4160-a201-fce9c609d2fa",
+            "display": "COVIDASSESSMENT"
           }
         ]
       },
@@ -525,6 +561,10 @@
           {
             "uuid": "afabceae-61d4-42b6-8f6a-fff48a7797ea",
             "display": "COVIDCASEREPORTING"
+          },
+          {
+            "uuid": "8010fabc-2e58-4160-a201-fce9c609d2fa",
+            "display": "COVIDASSESSMENT"
           }
         ]
       },
@@ -1212,6 +1252,10 @@
           {
             "uuid": "5b1ef308-ed8f-4a86-88a0-c29a30246740",
             "display": "HIVCLINICALREFERRAL"
+          },
+          {
+            "uuid": "8010fabc-2e58-4160-a201-fce9c609d2fa",
+            "display": "COVIDASSESSMENT"
           }
         ]
       },
@@ -1268,6 +1312,10 @@
           {
             "uuid": "5b1ef308-ed8f-4a86-88a0-c29a30246740",
             "display": "HIVCLINICALREFERRAL"
+          },
+          {
+            "uuid": "8010fabc-2e58-4160-a201-fce9c609d2fa",
+            "display": "COVIDASSESSMENT"
           }
         ]
       },
@@ -1316,6 +1364,10 @@
           {
             "uuid": "5b1ef308-ed8f-4a86-88a0-c29a30246740",
             "display": "HIVCLINICALREFERRAL"
+          },
+          {
+            "uuid": "8010fabc-2e58-4160-a201-fce9c609d2fa",
+            "display": "COVIDASSESSMENT"
           }
         ]
       },
@@ -1368,6 +1420,10 @@
           {
             "uuid": "5b1ef308-ed8f-4a86-88a0-c29a30246740",
             "display": "HIVCLINICALREFERRAL"
+          },
+          {
+            "uuid": "8010fabc-2e58-4160-a201-fce9c609d2fa",
+            "display": "COVIDASSESSMENT"
           }
         ]
       },
@@ -1420,6 +1476,10 @@
           {
             "uuid": "5b1ef308-ed8f-4a86-88a0-c29a30246740",
             "display": "HIVCLINICALREFERRAL"
+          },
+          {
+            "uuid": "8010fabc-2e58-4160-a201-fce9c609d2fa",
+            "display": "COVIDASSESSMENT"
           }
         ]
       },
@@ -1472,6 +1532,10 @@
           {
             "uuid": "5b1ef308-ed8f-4a86-88a0-c29a30246740",
             "display": "HIVCLINICALREFERRAL"
+          },
+          {
+            "uuid": "8010fabc-2e58-4160-a201-fce9c609d2fa",
+            "display": "COVIDASSESSMENT"
           }
         ]
       },
@@ -1652,6 +1716,10 @@
           {
             "uuid": "5b1ef308-ed8f-4a86-88a0-c29a30246740",
             "display": "HIVCLINICALREFERRAL"
+          },
+          {
+            "uuid": "8010fabc-2e58-4160-a201-fce9c609d2fa",
+            "display": "COVIDASSESSMENT"
           }
         ]
       }
@@ -1754,6 +1822,10 @@
           {
             "uuid": "824ca90d-c313-4d7e-bc99-119871d927cb",
             "display": "OVCNONENROLLMENT"
+          },
+          {
+            "uuid": "8010fabc-2e58-4160-a201-fce9c609d2fa",
+            "display": "COVIDASSESSMENT"
           }
         ]
       }
@@ -2314,6 +2386,10 @@
           {
             "uuid": "5b1ef308-ed8f-4a86-88a0-c29a30246740",
             "display": "HIVCLINICALREFERRAL"
+          },
+          {
+            "uuid": "8010fabc-2e58-4160-a201-fce9c609d2fa",
+            "display": "COVIDASSESSMENT"
           }
         ]
       },
@@ -2541,6 +2617,10 @@
           {
             "uuid": "5b1ef308-ed8f-4a86-88a0-c29a30246740",
             "display": "HIVCLINICALREFERRAL"
+          },
+          {
+            "uuid": "8010fabc-2e58-4160-a201-fce9c609d2fa",
+            "display": "COVIDASSESSMENT"
           }
         ]
       },
@@ -2592,6 +2672,10 @@
           {
             "uuid": "5b1ef308-ed8f-4a86-88a0-c29a30246740",
             "display": "HIVCLINICALREFERRAL"
+          },
+          {
+            "uuid": "8010fabc-2e58-4160-a201-fce9c609d2fa",
+            "display": "COVIDASSESSMENT"
           }
         ]
       },
@@ -2640,6 +2724,10 @@
           {
             "uuid": "5b1ef308-ed8f-4a86-88a0-c29a30246740",
             "display": "HIVCLINICALREFERRAL"
+          },
+          {
+            "uuid": "8010fabc-2e58-4160-a201-fce9c609d2fa",
+            "display": "COVIDASSESSMENT"
           }
         ]
       },
@@ -3938,6 +4026,10 @@
           {
             "uuid": "5b1ef308-ed8f-4a86-88a0-c29a30246740",
             "display": "HIVCLINICALREFERRAL"
+          },
+          {
+            "uuid": "8010fabc-2e58-4160-a201-fce9c609d2fa",
+            "display": "COVIDASSESSMENT"
           }
         ]
       },
@@ -3978,6 +4070,10 @@
           {
             "uuid": "afabceae-61d4-42b6-8f6a-fff48a7797ea",
             "display": "COVIDCASEREPORTING"
+          },
+          {
+            "uuid": "8010fabc-2e58-4160-a201-fce9c609d2fa",
+            "display": "COVIDASSESSMENT"
           }
         ]
       },
