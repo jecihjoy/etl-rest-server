@@ -25,11 +25,15 @@ function separateAllowedDisallowedVisitTypes(scope, visitTypes) {
   };
 
   if (Array.isArray(visitTypes)) {
-    visitTypes.forEach((item) => {
-      if (isVisitTypeAllowed(scope, item)) {
-        separated.allowed.push(item);
+    visitTypes.forEach((visit) => {
+      visit.encounterTypes = separateAllowedDisallowedEncounterTypes(
+        scope,
+        visit.encounterTypes
+      );
+      if (isVisitTypeAllowed(scope, visit)) {
+        separated.allowed.push(visit);
       } else {
-        separated.disallowed.push(item);
+        separated.disallowed.push(visit);
       }
     });
   }
@@ -80,4 +84,29 @@ function getPatientVisitTypes(
         });
       });
   });
+}
+
+function separateAllowedDisallowedEncounterTypes(scope, encounterTypes) {
+  const separated = {
+    allowedEncounters: [],
+    disallowedEncounters: []
+  };
+
+  if (Array.isArray(encounterTypes)) {
+    encounterTypes.forEach((encounter) => {
+      if (isEncounterTypeAllowed(scope, encounter)) {
+        separated.allowedEncounters.push(encounter);
+      } else {
+        separated.disallowedEncounters.push(encounter);
+      }
+    });
+  }
+  return separated;
+}
+
+function isEncounterTypeAllowed(scope, encounterType) {
+  if (!encounterType.allowedIf) {
+    return true;
+  }
+  return expressionRunner.run(encounterType.allowedIf, scope);
 }
